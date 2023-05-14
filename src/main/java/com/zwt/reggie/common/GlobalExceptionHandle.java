@@ -26,7 +26,12 @@ public class GlobalExceptionHandle {
             return R.error(msg);
         }
         return R.error("操作失败");
-
-
     }
+
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandle(CustomException ex){
+        return R.error(ex.getMessage());
+    }
+
+
 }
