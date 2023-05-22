@@ -22,6 +22,9 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 //        classpath 对应 resources目录
         registry.addResourceHandler("/backend/**").addResourceLocations("classpath:/backend/");
         registry.addResourceHandler("/front/**").addResourceLocations("classpath:/front/");
+        /** 配置knife4j 显示文档 */
+        registry.addResourceHandler("doc.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
     }
     /**
      * 扩展mvc框架的消息转换器 项目启动时就会调用

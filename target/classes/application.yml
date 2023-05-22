@@ -1,6 +1,9 @@
 server:
-  port: 8082
+  port: 8080
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   application:
     name: reggie_take_out
   #数据源
@@ -21,3 +24,7 @@ mybatis-plus:
     db-config:
       id-type: assign_id
 #雪花算法，生成主键id
+
+
+reggie:
+  path: D:\img\
