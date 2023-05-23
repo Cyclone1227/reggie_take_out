@@ -63,7 +63,7 @@ public class ShoppingCartController {
      * 购物车列表
      * @return
      */
-    @GetMapping()
+    @GetMapping("/list")
     public R<List<ShoppingCart>> list() {
         LambdaQueryWrapper<ShoppingCart> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(ShoppingCart::getUserId, BaseContext.getCurrentId());
